@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import pdf from '../files/resume_2.pdf';
 import '../App.css';
 
 class Content extends React.Component {
@@ -29,7 +30,7 @@ class Content extends React.Component {
           <a href='https://www.linkedin.com/in/gustavo-placencia-carranza/' rel='noopener noreferrer' target='_blank'>
             <img src='LILogo.png' alt='linkedin' className='link'></img>
           </a>
-          <a href='Resume_2.pdf' rel='noopener noreferrer' target='_blank'>
+          <a href={pdf} rel='noopener noreferrer' target='_blank'>
             <img src='res.png' alt='resume' className='link'></img>
           </a>
         </div>
