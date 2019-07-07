@@ -7,7 +7,8 @@ class Card extends React.Component {
     this.state = {
       front: this.props.front,
       letter: this.props.letter,
-      rot: this.props.rot
+      rot: this.props.rot,
+      pos: 0.05 * (this.props.x + this.props.y)
     };
   }
 
@@ -23,7 +24,7 @@ class Card extends React.Component {
   render() {
     return (
       <div className="flip-card">
-        <div className="flip-card-inner" style={{transform: `rotateY(${this.state.rot}deg)`}}>
+        <div className="flip-card-inner" style={{transform: `rotateY(${this.state.rot}deg)`, transitionDelay: `${this.state.pos}s`}}>
           <div className="flip-card-front">
             <img src='back.png' alt="card"></img>
           </div>

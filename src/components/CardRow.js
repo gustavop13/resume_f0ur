@@ -7,7 +7,8 @@ class CardRow extends React.Component {
     super(props);
     this.state = {
       word: this.props.word,
-      rot: this.props.rot
+      rot: this.props.rot,
+      y: this.props.y
     };
   }
 
@@ -23,7 +24,7 @@ class CardRow extends React.Component {
   render() {
     return (
       <div className="cardRow">
-      {Array.from(this.state.word).map((l, i) => <Card key={i} rot={this.state.rot} front={"front" + (Math.floor(Math.random() * 4) + 1) + ".png"} letter={l}/>)}
+      {Array.from(this.state.word).map((l, i) => <Card key={i} rot={this.state.rot} front={"front" + (Math.floor(Math.random() * 4) + 1) + ".png"} letter={l} x={i} y={this.state.y}/>)}
       </div>
     );
   }

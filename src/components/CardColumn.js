@@ -26,7 +26,7 @@ class CardColumn extends React.Component {
   render() {
     return (
       <div className="column">
-        {Array.from(this.state.words).map((l, i) => <CardRow rot={this.state.rot} key={i} ref={CardRow => this.cardRows[i] = CardRow} word={l}/>)}
+        {Array.from(this.state.words).map((l, i) => <CardRow rot={this.state.rot} key={i} ref={CardRow => this.cardRows[i] = CardRow} word={l} y={i}/>)}
       </div>
     );
   }
