@@ -24,7 +24,7 @@ class CardRow extends React.Component {
   render() {
     return (
       <div className="cardRow">
-      {Array.from(this.state.word).map((l, i) => <Card key={i} rot={this.state.rot} front={"front" + (Math.floor(Math.random() * 4) + 1) + ".png"} letter={l} x={i} y={this.state.y}/>)}
+        {Array.from(this.state.word + " ".repeat(6-this.state.word.length)).map((l, i) => <Card key={i} rot={this.state.rot} front={"front" + (Math.floor(Math.random() * 4) + 1) + ".png"} letter={l} x={i} y={this.state.y}/>)}
       </div>
     );
   }

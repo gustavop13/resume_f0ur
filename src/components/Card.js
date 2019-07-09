@@ -8,8 +8,9 @@ class Card extends React.Component {
       front: this.props.front,
       letter: this.props.letter,
       rot: this.props.rot,
-      pos: 0.05 * (this.props.x + this.props.y)
+      pos: 0.05 * (this.props.x + this.props.y),
     };
+    this.let = "visible";
   }
 
   componentDidUpdate(prevProps) {
@@ -22,9 +23,11 @@ class Card extends React.Component {
   }
 
   render() {
+    if(this.state.letter === " ") {this.let = "hidden";}
+    else {this.let = "visible";}
     return (
       <div className="flip-card">
-        <div className="flip-card-inner" style={{transform: `rotateY(${this.state.rot}deg)`, transitionDelay: `${this.state.pos}s`}}>
+        <div className="flip-card-inner" style={{transform: `rotateY(${this.state.rot}deg)`, transitionDelay: `${this.state.pos}s`, visibility: this.let}}>
           <div className="flip-card-front">
             <img src='back.png' alt="card"></img>
           </div>

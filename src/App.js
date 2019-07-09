@@ -14,7 +14,7 @@ class App extends React.Component {
     };
     this.ref = React.createRef();
     this.handleClick = this.handleClick.bind(this);
-    this.words = [["HTMl", "CSS", "JS", "REACT", "PHP", "NODEJS", "SQl"], ["HTML", "CSS", "JS", "NODEJS", "EJS"], ["P3", "ADOBE", "JAVA"], ["REACT", "JS", "NODEJS", "PHP", "GA", "THREE"]];
+    this.words = [["HTMl", "CSS", "JS", "REACT", "PHP", "NODEJS", "SQl"], ["HTML", "CSS", "JS", "NODEJS", "EJS", "", ""], ["P3", "ADOBE", "JAVA", "", "", "", ""], ["REACT", "JS", "NODEJS", "PHP", "GA", "THREE", ""]];
   }
 
   handleClick(e) {
